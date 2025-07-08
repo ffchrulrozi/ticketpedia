@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
+import 'package:ticketpedia/routes/paths.dart';
 import 'package:ticketpedia/utils/helper/divider_helper.dart';
 import 'package:ticketpedia/utils/helper/style_helper.dart';
 
@@ -17,6 +19,7 @@ class FeatureWidget extends StatelessWidget {
               label: "Plane",
               icon: FontAwesomeIcons.plane,
               color: Colors.blue,
+              path: Paths.PLANE.path,
             ),
             FeatureBox(
               label: "Train",
@@ -80,27 +83,26 @@ class FeatureBox extends StatelessWidget {
   final IconData icon;
   final Color color;
   final String? path;
-  const FeatureBox(
-      {required this.label,
-      required this.icon,
-      required this.color,
-      this.path,
-      super.key});
+  
+  const FeatureBox({
+    required this.label,
+    required this.icon,
+    required this.color,
+    this.path,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Column(
-        children: [
-          Icon(
-            icon,
-            color: color,
-          ),
-          Text(
-            label,
-            style: text(context).labelLarge!.copyWith(color: color),
-          )
-        ],
+      child: InkWell(
+        onTap: path != null ? () => context.push(path!) : null,
+        child: Column(
+          children: [
+            Icon(icon, color: color),
+            Text(label, style: text(context).labelLarge!.copyWith(color: color))
+          ],
+        ),
       ),
     );
   }

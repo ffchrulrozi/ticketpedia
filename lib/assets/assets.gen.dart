@@ -32,6 +32,10 @@ class $LibAssetsImgGen {
   /// File path: lib/assets/img/logo.png
   AssetGenImage get logo => const AssetGenImage('lib/assets/img/logo.png');
 
+  /// File path: lib/assets/img/plane_bg.png
+  AssetGenImage get planeBg =>
+      const AssetGenImage('lib/assets/img/plane_bg.png');
+
   /// File path: lib/assets/img/promo-1.png
   AssetGenImage get promo1 => const AssetGenImage('lib/assets/img/promo-1.png');
 
@@ -53,6 +57,7 @@ class $LibAssetsImgGen {
   List<AssetGenImage> get values => [
     google,
     logo,
+    planeBg,
     promo1,
     promo2,
     promoBg,

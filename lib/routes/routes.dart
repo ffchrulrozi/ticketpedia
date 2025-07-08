@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ticketpedia/modules/dashboard/screens/dashboard_screen.dart';
 import 'package:ticketpedia/modules/login/screens/login_screen.dart';
+import 'package:ticketpedia/modules/plane/screens/plane_screen.dart';
 import 'package:ticketpedia/modules/splash/screens/splash_screen.dart';
 import 'package:ticketpedia/routes/paths.dart';
 
@@ -23,6 +24,10 @@ final routerProvider = Provider<GoRouter>((ref) {
         GoRoute(
           path: Paths.DASHBOARD.path,
           builder: (context, state) => DashboardScreen(),
+        ),
+        GoRoute(
+          path: Paths.PLANE.path,
+          builder: (context, state) => PlaneScreen(),
         )
       ]);
 });
