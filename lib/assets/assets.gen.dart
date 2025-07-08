@@ -32,11 +32,33 @@ class $LibAssetsImgGen {
   /// File path: lib/assets/img/logo.png
   AssetGenImage get logo => const AssetGenImage('lib/assets/img/logo.png');
 
+  /// File path: lib/assets/img/promo-1.png
+  AssetGenImage get promo1 => const AssetGenImage('lib/assets/img/promo-1.png');
+
+  /// File path: lib/assets/img/promo-2.png
+  AssetGenImage get promo2 => const AssetGenImage('lib/assets/img/promo-2.png');
+
+  /// File path: lib/assets/img/promo_bg.png
+  AssetGenImage get promoBg =>
+      const AssetGenImage('lib/assets/img/promo_bg.png');
+
+  /// File path: lib/assets/img/search_bg.png
+  AssetGenImage get searchBg =>
+      const AssetGenImage('lib/assets/img/search_bg.png');
+
   /// File path: lib/assets/img/splash.png
   AssetGenImage get splash => const AssetGenImage('lib/assets/img/splash.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [google, logo, splash];
+  List<AssetGenImage> get values => [
+    google,
+    logo,
+    promo1,
+    promo2,
+    promoBg,
+    searchBg,
+    splash,
+  ];
 }
 
 class Assets {
